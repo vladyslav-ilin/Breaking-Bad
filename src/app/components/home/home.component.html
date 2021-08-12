@@ -1,0 +1,61 @@
+<div class="container">
+
+  <mat-progress-spinner
+    mode="indeterminate"
+    diameter="70"
+  *ngIf="loading"
+  class="spinner">
+  </mat-progress-spinner>
+
+  <button mat-raised-button color="primary" (click)="updatePerson()" class="add">
+    Add new movie
+  </button>
+
+  <div class="card">
+
+    <div class="card__wrapper">
+      <mat-card *ngFor="let item of details" class="card__item">
+        <mat-icon (click)="deletePerson(item)" class="card__close" title="delete">cancel</mat-icon>
+        <div class="card__content">
+          <div class="card__head">
+            <mat-card-title>
+              {{item.name}}
+            </mat-card-title>
+
+            <i class="icon-dead card__icon card__icon-dead" *ngIf="item.status === 'Deceased'"></i>
+            <i class="icon-alive card__icon card__icon-alive" *ngIf="item.status === 'Alive'"></i>
+
+          </div>
+          <mat-card-subtitle><strong>Nickname: </strong>{{item.nickname}}</mat-card-subtitle>
+        </div>
+
+        <div class="card__photo">
+          <img mat-card-image src="{{item.img}}" alt="Photo of a {{item.name}}" class="card__img">
+          <div class="card__status" [ngClass]="{'card__status-dead': item.status === 'Deceased', 'card__status-presumed': item.status === 'Presumed dead', 'card__status-alive': item.status === 'Alive'}"></div>
+
+          <button class="card__btn card__btn-status" *ngIf="item.status === 'Alive'" (click)="killPerson(item)">One click, one kill</button>
+          <button class="card__btn card__btn-status" *ngIf="item.status === 'Deceased'" (click)="resurrectPerson(item)">Let's try</button>
+
+        </div>
+
+        <mat-card-actions>
+
+          <button mat-raised-button class="card__btn" (click)="detailPerson(item)" >
+            Check more details
+          </button>
+
+          <button mat-raised-button color="warm" (click)="updatePerson(item)">
+            Edit
+          </button>
+
+        </mat-card-actions>
+
+      </mat-card>
+
+    </div>
+  </div>
+
+</div>
+
+
+

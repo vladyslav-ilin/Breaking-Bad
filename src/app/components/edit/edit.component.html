@@ -1,0 +1,24 @@
+<h1 mat-dialog-title>
+  <span *ngIf="data.char_id">Edit</span>
+  <span *ngIf="!data.char_id">Add new person</span>
+</h1>
+
+<div mat-card-content>
+  <mat-form-field>
+    <mat-label>Name: </mat-label>
+    <input matInput
+           name="name"
+           [(ngModel)]="data.name"
+           value="{{data.name}}">
+  </mat-form-field>
+
+
+</div>
+
+<div mat-dialog-actions>
+  <button mat-raised-button color="primary"
+          [mat-dialog-close]="data">Save</button>
+  <button mat-raised-button (click)="closeDialog()" color="warn">Close</button>
+</div>
+
+

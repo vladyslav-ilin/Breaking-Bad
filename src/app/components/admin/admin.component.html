@@ -1,0 +1,39 @@
+<div class="container">
+  <form class="form" [formGroup]="form" (ngSubmit)="submit()">
+    <div class="form__control">
+      <label for="email" class="form__label">Email: </label>
+      <input type="email" class="form__input"
+      formControlName="email">
+
+      <div class="form__validation" *ngIf="email?.touched && email?.invalid">
+        <small class="form__valid"
+               *ngIf="email?.errors?.required">
+          Fill in the full field
+        </small>
+
+        <small class="form__valid"
+               *ngIf="email?.errors?.email">
+          Enter correct email
+        </small>
+      </div>
+    </div>
+
+    <div class="form__control">
+      <label for="password" class="form__label">Password</label>
+      <input type="password" class="form__input" id="password" formControlName="password">
+      <div class="validation"
+           *ngIf="password?.touched && password?.invalid">
+        <small class="form__valid" *ngIf="password?.errors?.required">Fill in the password</small>
+        <small *ngIf="password?.errors?.minLength">Min password {{password?.errors?.minLength.requiredLength}}.Current length {{password?.errors?.minLength.actualLength}}</small>
+      </div>
+    </div>
+
+    <button type="submit" mat-raised-button
+    [disabled]="form.invalid">Submit</button>
+  </form>
+</div>
+
+
+
+
+

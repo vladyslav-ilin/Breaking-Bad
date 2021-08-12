@@ -1,0 +1,10 @@
+<div *ngIf="data">
+  <div class="data__item">
+    <p *ngIf="data.status === 'Alive'">Do you really want to kill me?</p>
+    <p *ngIf="data.status === 'Deceased'">Do you wanna see some magic?</p>
+  </div>
+
+
+  <button mat-raised-button (click)="saveDialog(data)" color="primary" class="data__btn">Sure</button>
+  <button mat-raised-button (click)="closeDialog()" color="warn" class="data__btn">Close</button>
+</div>

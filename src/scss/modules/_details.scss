@@ -1,0 +1,12 @@
+.detail{
+  &__item{
+    display: flex;
+    margin-bottom: 15px;
+    align-items: center;
+  }
+  &__name{
+    font-weight: 700;
+    margin-right: 10px;
+    font-size: 18px;
+  }
+}

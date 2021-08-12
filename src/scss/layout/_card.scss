@@ -1,0 +1,111 @@
+.card{
+  padding-top: 40px;
+  &__wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__item{
+    width: 30%;
+    margin-bottom: 25px;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  &__btn{
+    &-death{
+      background-color: #af1616;
+    }
+
+    &-status{
+      @include pos($b: 35px, $l: 50%, $pos: absolute, $z: 20);
+      transform: translateX(-50%);
+      opacity: 0;
+      cursor: pointer;
+      transition: all .3s ease;
+      padding: 5px 10px;
+      font-weight: 700;
+      border-radius: 3px;
+    }
+  }
+
+  .mat-card-actions{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__photo{
+    position: relative;
+    &:hover{
+      .card__btn-status{
+        opacity: 1;
+      }
+    }
+  }
+
+  &__status{
+    &-dead,
+    &-presumed{
+      @include align(true, true, absolute);
+      @include size(calc(100% + 32px), 100%);
+      background: rgba(0,0,0,.6);
+      z-index: 10;
+      margin: -16px -16px 16px 0;
+      &::before{
+        @include align(true, true, absolute);
+        content: 'dead';
+        position: absolute;
+        color: #731c1c;
+        font-size: 36px;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  &__kill {
+    &-dead,
+    &-presumed{
+      display: block;
+    }
+
+    &-active {
+      display: block;
+    }
+  }
+
+  &__head{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    position: relative;
+    width: 70%;
+  }
+
+  .mat-card-title{
+    margin-bottom: 0;
+  }
+
+  &__close{
+    @include pos($t:15ps, $r: 10px);
+    cursor: pointer;
+  }
+
+  &__icon{
+    margin-left: 20px;
+
+    &-dead{
+      color: red;
+    }
+
+    &-alive{
+      color: green;
+      font-size: 20px;
+    }
+  }
+
+
+}

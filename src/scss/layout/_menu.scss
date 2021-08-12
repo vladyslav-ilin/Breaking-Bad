@@ -1,0 +1,17 @@
+.menu{
+  width: 15%;
+  &__list{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__span{
+    margin-left: 5px;
+    font: 18px $title;
+    text-transform: uppercase;
+  }
+  &__item{
+    &--active{
+      color: blue;
+    }
+  }
+}

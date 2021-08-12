@@ -1,0 +1,32 @@
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	outline: none;
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+	scroll-behavior: smooth;
+}
+
+body, html {
+	min-height: 100%;
+	width: 100%;
+}
+
+body{
+  font-family: $text;
+  background: url("../../assets/images/bgr.jpg") no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.container{
+  min-width: 320px;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+// Main styles

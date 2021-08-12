@@ -1,0 +1,41 @@
+<mat-toolbar color="primary" class="header">
+  <i class="icon-icon logo"></i>
+
+  <span class="menu__span">Breaking Bad</span>
+
+  <!--<nav class="menu">
+    <ul class="menu__list">
+      <li class="menu__item" >
+        <button mat-icon-button routerLink="/home" routerLinkActive="menu__item&#45;&#45;active" [disabled]="!isLoggedIn">
+          <mat-icon>play_circle</mat-icon>
+          <span class="menu__span">Playlist</span>
+        </button>
+      </li>
+
+
+      <li class="menu__item" >
+        <button mat-icon-button routerLink="/edit" routerLinkActive="menu__item&#45;&#45;active"> &lt;!&ndash;[disabled]="!isLoggedIn"&ndash;&gt;
+          <mat-icon>add </mat-icon>
+          <span class="menu__span">Add new</span>
+        </button>
+      </li>
+    </ul>
+  </nav>-->
+
+  <div class="dropdown">
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>account_circle</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item class="dropdown__item">
+        <mat-icon>logout</mat-icon>
+        <span routerLink="/admin">Logout</span>
+      </button>
+    </mat-menu>
+  </div>
+
+</mat-toolbar>
+
+
+
+<router-outlet></router-outlet>

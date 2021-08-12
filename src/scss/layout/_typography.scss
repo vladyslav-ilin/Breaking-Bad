@@ -1,0 +1,48 @@
+.logo{
+  font-size: 50px;
+  transition: all .3s ease;
+  cursor: pointer;
+
+  &:hover{
+    color: #00ff00;
+  }
+}
+
+.dropdown{
+    &__item{
+      span{
+        font: 16px $text;
+      }
+    }
+}
+
+.loading{
+  &::before{
+    content: '';
+    @include pos($t:0, $b:0, $r:0, $l:0, $pos: absolute);
+    background: rgba(0,0,0,.7);
+    z-index: 98;
+  }
+}
+
+.spinner{
+  @include pos($t:50%, $l:50%);
+  position: absolute!important;
+  z-index: 99;
+}
+
+.data{
+  &__item{
+    margin-bottom: 25px;
+  }
+
+  &__btn{
+    margin-right: 20px !important;
+  }
+}
+
+  .add{
+    margin-top: 15px !important;
+    display: inline-block !important;
+  }
+

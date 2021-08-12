@@ -1,0 +1,39 @@
+<div class="detail">
+  <div class="detail__item">
+    <h2 class="detail__name">
+      Name:
+    </h2>
+    <span class="detail__span">{{data.name}}</span>
+  </div>
+
+  <div class="detail__item">
+    <h2 class="detail__name">
+      Nickname:
+    </h2>
+    <span class="detail__span">{{data.nickname}}</span>
+  </div>
+
+  <div class="detail__item">
+    <h2 class="detail__name">
+      Actor:
+    </h2>
+    <span class="detail__span">{{data.portrayed}}</span>
+  </div>
+
+  <div class="detail__item">
+    <h2 class="detail__name">
+      Occupation:
+    </h2>
+    <span class="detail__span">{{data.occupation}}</span>
+  </div>
+
+  <div class="detail__item">
+    <h2 class="detail__name">
+      Status:
+    </h2>
+    <span class="detail__span">{{data.status | uppercase}}</span>
+  </div>
+
+</div>
+
+<button mat-raised-button (click)="closeDialog()" color="primary">Close</button>

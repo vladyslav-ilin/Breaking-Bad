@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=New+Rocker&display=swap');
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../../assets/fonts/icomoon/icomoon.eot?2oiyu3');
+  src:  url('../../assets/fonts/icomoon/icomoon.eot?2oiyu3#iefix') format('embedded-opentype'),
+  url('../../assets/fonts/icomoon/icomoon.ttf?2oiyu3') format('truetype'),
+  url('../../assets/fonts/icomoon/icomoon.woff?2oiyu3') format('woff'),
+  url('../../assets/fonts/icomoon/icomoon.svg?2oiyu3#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-dead:before {
+  content: "\e900";
+}
+.icon-icon:before {
+  content: "\e901";
+}
+.icon-alive:before {
+  content: "\e902";
+}
